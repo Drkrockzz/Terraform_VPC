@@ -18,6 +18,6 @@ terraform {
     key    = "state/lock"
     region = var.region
     use_lockfile = true
-    dynamodb_table = teraform_lockid
+    dynamodb_table = "teraform_lockid"
   }
 }
