@@ -10,3 +10,14 @@ terraform {
 provider "aws" {
   region = var.region
 }
+
+
+terraform {
+  backend "s3" {
+    bucket = "drktstate"
+    key    = "state/lock"
+    region = var.region
+    use_lockfile = true
+    dynamodb_table = teraform_lockid
+  }
+}
