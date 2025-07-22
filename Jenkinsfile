@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("clone repo"){
             steps{
-                git branch:'main'  url:'https://github.com/Drkrockzz/Terraform_VPC.git'
+                git branch:'main', url:'https://github.com/Drkrockzz/Terraform_VPC.git'
             }
         }
         stage("terraform initialize"){
